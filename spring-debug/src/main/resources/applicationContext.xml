@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 一个简单的 POJO bean -->
+	<bean id="helloService" class="com.edison.springdebug.HelloService">
+		<property name="message" value="Hello from pure XML!" />
+	</bean>
+
+	<!-- 可选：注册 PropertySourcesPlaceholderConfigurer 手动方式（替代 <context:property-placeholder>） -->
+	<!-- 注意：这是标准 bean，不是自定义标签 -->
+	<!--
+	<bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+		<property name="location" value="classpath:test.properties" />
+	</bean>
+	-->
+
+</beans>

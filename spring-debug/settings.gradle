@@ -1,0 +1,5 @@
+rootProject.name = 'spring-debug'
+
+// 使用复合构建，将上一级目录（spring-framework 源码根目录）作为本地依赖
+// 这样在启动和 debug 时，就会优先使用本地的源码而不是去下载官方的 jar 包
+includeBuild '../'
